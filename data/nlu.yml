@@ -1,0 +1,167 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - Bonjour
+    - hi
+    - salut
+    - coucou
+    - cc
+    - bjr
+    - bon jour
+    - slt
+    - bonsoir
+    - bonjour
+- intent: goodbye
+  examples: |
+    - au revoir
+    - bye bye
+    - bye
+    - à bientot
+    - à plus tard
+    - à plus
+    - trés bientot
+    - à la prochaine
+    - à trés vite
+- intent: affirm
+  examples: |
+    - yes
+    - oui
+    - effectivement
+    - c'est ça
+    - exactement
+    - absolument
+    - totalement
+    - certainement
+    - évidemment
+    - surement
+- intent: deny
+  examples: |
+    - no
+    - non
+    - je ne crois pas
+    - ce n'est pas ça
+    - nn
+    - pas vraiment
+    - pas du tout
+    - absolument pas
+    - jamais
+- intent: thank
+  examples: |
+    - merci
+    - parfait
+    - c'est réglé
+    - c'est bon 
+    - ça marche 
+    - fonctionne
+    - ca fonctionne  
+- intent: problemeCommercial
+  examples: |
+    - j'ai un probléme commercial
+    - commercial
+- intent: problemeAutres
+  examples: |
+    - autres
+    - j'ai un autre probléme
+- intent: problemeTechnique
+  examples: |
+    - j'ai un probléme technique
+    - technique
+- intent: coupure
+  examples: |
+    - la connexion ne marche plus
+    - la connexion est coupée
+    - plus de connexion
+    - pas de connexion
+    - pas d'internet
+    - l'internet ne matche plus
+    - coupure internet 
+    - probléme de coupure de connexion
+- intent: lenteur
+  examples: |
+    - lenteur de connexion
+    - lenteur de site internet 
+    - un site
+    - plusieurs
+    - la connexion buge
+    - connexion tres lente
+    - lente connexion
+    - tout les sites sont lents
+    - plusieurs sites buge
+    - tout les sites marche en ralenti
+    - plusieurs sites sont len
+    - un seul site est lent
+    - débit faible
+    - j'ai un faible débit
+    - la connexion est trés faible
+    - pfaible connexion
+    - faible réseau
+    - connexion en ralentie
+- intent: wifi
+  examples: |
+    - probléme de wifi
+    - j'ai un probléme de wifi
+    - mon wifi ne fonctionne pas
+    - wifi ne fonction plus
+    - plus de wifi
+    - wifi ne marche pas
+    - pas de wifi
+    - wifi
+- intent: inform
+  examples: |
+    - mon numéro de téléphone est [71396171] (phone_number)
+    - mon num adsl est [71654789] (phone_number)
+    - numero tél [71623005] (phone_number)
+    - [71623005] (phone_number)
+    - voila mon num [71623005] (phone_number)
+    - c'est mon numéro [71623005] (phone_number)
+    - c mon num [71623005] (phone_number)
+    - [71498380](phone_number)
+    - [71984874](phone_number)
+    - [71000004](phone_number)
+    - [71000001](phone_number)
+    - [71000000](phone_number)
+    - [71000004](phone_number)
+    - [71000003](phone_number)
+    - [71000001](phone_number)
+    - [71000000](phone_number)
+    - [un seule] site (number_site)
+    - [un site] (number_site)
+    - [1] site (number_site)
+    - [plusieurs] sites (number_site)
+    - [plusieur] site (number_site)
+    - [tous] les sites (number_site)
+    - [un seul] appareil (number_appareil)
+    - [un appareil] (number_appareil)
+    - [1] appareil (number_appareil)
+    - [plusieurs] appareils (number_appareil)
+    - [plusieur] appareils (number_appareil)
+    - [tous] appareils (number_appareil)
+- intent: marqueModem
+  examples: |
+    - mon modéme est [tp-link] (marque)
+    - la marqque de mon modéme [sagem] (marque)
+    - c'est un modéme [tp link] (marque)
+    - modem [thomson] (marque)
+    - j'ai un modem [dlink] (marque)
+    - un modem [d link] (marque)
+    - [huawei] (marque)
+- intent: equipement
+  examples: |
+    - j'utilise un [repeteur wifi] (equipement)
+    - j'utilise un [répéteur wifi] (equipement)
+    - c'est un [épéteur wifi] (equipement)
+    - je suis connécté avec un [point d'accès] (equipement)
+    - [modem] {"entity": "equipement", "value": "modem"}
+- regex: phone_number
+  examples: |
+    - ^[7]\d{7}
+- synonym: '1'
+  examples: |
+    - un seule
+    - un seul
+- synonym: 'plusieurs'
+  examples: |
+    - plusieur
+    - tous

@@ -1,0 +1,115 @@
+version: "2.0"
+
+stories:
+
+- story: salutation
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_type_prb
+
+- story: prb_autres_commercial
+  steps:
+  - or:
+    - intent: problemeCommercial
+    - intent: problemeAutres
+  - action: utter_out_prb 
+
+- story: prb_technique
+  steps:
+  - intent: problemeTechnique
+  - action: utter_ask_phone 
+
+- story: probléme lenteur + plusieurs sites + plusieurs appareils
+  steps:
+  - intent: lenteur
+  - action: utter_ask_test_site
+  - intent: inform
+  - action: action_check_lenteur
+  - action: utter_ask_prb_regle
+  - intent: deny
+  - action: utter_lenteur_non_regle
+
+- story: probléme technique wifi + ask equipement
+  steps:
+  - intent: wifi
+  - action: utter_ask_type_equipement
+  - intent: equipement
+  - action: action_prb_wifi
+
+- story: equipement modem + ask marque + ask prb regle =non
+  steps:
+  - intent: marqueModem
+  - action: utter_ask_check_modem
+  - action: utter_ask_prb_regle
+  - intent: deny
+  - action: action_config_modem
+  - intent: deny
+  - action: utter_out_prb 
+
+- story: equipement modem + ask marque + ask prb regle =oui
+  steps:
+  - intent: marqueModem
+  - action: utter_ask_check_modem
+  - action: utter_ask_prb_regle
+  - intent: affirm
+  - action: utter_welcom
+
+- story: probléme technique coupure + ask type coupure + mini coupure
+  steps:
+  - intent: coupure
+  - action: utter_ask_type_coupure
+  - intent: coupure
+  - slot_was_set:
+    - type_coupure: mini_coupure
+#  - action: utter_ask_marque_modem
+#  - intent: marqueModem
+  - action: utter_ask_tonalite
+  - checkpoint: ask_tonalite
+
+- story: coupure + ask tonalité + deny
+  steps:
+  - checkpoint: ask_tonalite
+# - checkpoint: ask_tonalite
+  - intent: deny
+  - action: utter_test_tonalite
+  - action: utter_ask_prb_regle
+  - intent: deny
+  - action: utter_reclamation_enregistre
+
+- story: coupure + ask tonalité + affirm + affrim parasite 
+  steps:
+  - checkpoint: ask_tonalite
+# - action: utter_ask_tonalite
+  - intent: affirm
+  - action: utter_ask_parasite
+  - intent: deny
+  - action: utter_deny_parasite
+  - action: utter_ask_prb_regle
+  - intent: deny
+  - action: utter_reclamation_enregistre
+
+- story: coupure + ask tonalité + affirm + deny parasite 
+  steps:
+  - checkpoint: ask_tonalite
+# - action: utter_ask_tonalite
+  - intent: affirm
+  - action: utter_ask_parasite
+  - intent: affirm
+  - action: utter_affirm_parasite
+  - action: utter_ask_prb_regle
+  - intent: deny
+  - action: utter_reclamation_enregistre
+
+- story: probléme technique coupure + ask type coupure + pas de connxion
+  steps:
+  - intent: coupure
+  - action: utter_ask_type_coupure
+  - intent: coupure
+  - slot_was_set:
+    - type_coupure: pas de connexion
+  - action: utter_ask_voyant_power
+  - intent: coupure
+  - slot_was_set:
+    - type_coupure: etat_voyant_power 
+  - action: action_ask_voyant_power
