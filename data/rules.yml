@@ -42,6 +42,7 @@ rules:
   - action: utter_deny_parasite 
   - action: utter_ask_prb_regle
 
+
 - rule: Implementation of the Two-Stage-Fallback
   steps:
   - intent: nlu_fallback

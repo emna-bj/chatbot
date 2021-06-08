@@ -14,19 +14,36 @@ intents:
 - problemeAutres
 - problemeTechnique
 - coupure
-- lenteur
-- wifi
-- inform
+- pas_de_connexion
+- etat_voyant
+- lenteur:
+    ignore_entities:
+      - number_appareil
+- micro_coupure
+- affirm_tonalite
+- deny_tonalite
+- affrim_parasite
+- wifi:
+    ignore_entities:
+      - equipement
+- inform:
+    use_entities:
+      - phone_number
+      - number_appareil
+      - number_site
 - marqueModem:
-    use_entities: []
-- equipement:
-    use_entities: []
+    use_entities:
+      - marque
+- Typeequipement
 entities: 
 - phone_number
 - number_site
 - number_appareil
 - equipement
 - marque
+- etat_voyant_power
+- etat_voyant_adsl
+- type_coupure
 slots: 
   phone_number:
     type: text
@@ -35,20 +52,24 @@ slots:
     type: categorical
     influence_conversation: false
     values:
-    - un site
-    - plusieurs
+    - un seul site
+    - plusieurs sites
   number_appareil:
     type: categorical
     influence_conversation: false
     values:
-    - un appareil
+    - un seul appareil
     - plusieurs appareils
   cable: 
     type: bool
     influence_conversation: false
   equipement:
-    type: text
-    influence_conversation: true
+    type: categorical
+    influence_conversation: false
+    values:
+    - point daccès
+    - modem
+    - répéteur wifi
   marque:
     type: categorical
     influence_conversation: false
@@ -69,15 +90,21 @@ slots:
     type: categorical
     influence_conversation: true
     values:
-    - rouge
+    - éteint
     - vert
-    - clignite en vert  
+    - clignote en vert  
   type_coupure:
     type: categorical
     influence_conversation: true
     values:
     - mini_coupure
     - pas de connexion
+  etat_tonalite:
+    type: categorical
+    influence_conversation: true
+    values:
+    - no_tonalite
+    - yes_tonalite
 responses:
   utter_greet:
   - text: bonjour! je suis votre supperbot 
@@ -105,16 +132,16 @@ responses:
     text: Pouvez-vous m'en dire d'avantage sur la nature de votre probléme technique?
   utter_ask_test_site:
   - buttons:
-    - payload: '/inform{{"number_site": "plusieurs"}}'
+    - payload: '/inform{{"number_site": "plusieurs sites"}}'
       title: plusieurs sites
-    - payload: '/inform{{"number_site": "un site"}}'
+    - payload: '/inform{{"number_site": "un seul site"}}'
       title: un seul site
-    text: Veuillez tester votre navigation sur plusieurs sites internet. \n Alors apres le test ! Un seul ou tous les sites sont touchés par la lenteur?
+    text: "Veuillez tester votre navigation sur plusieurs sites internet. \n Alors apres le test ! Un seul ou tous les sites sont touchés par la lenteur?"
   utter_ask_test_appareil:
   - buttons:
     - payload: '/inform{{"number_appareil": "plusieurs appareils"}}'
       title: plusieurs appareils
-    - payload: '/inform{{"number_appareil": "un appareil"}}'
+    - payload: '/inform{{"number_appareil": "un seul appareil"}}'
       title: un seul appareil
     text: |-
       Dans ce cas, Veuillez effectuer un test de navigation avec un autre appareil. \n
@@ -123,13 +150,15 @@ responses:
   - text: Si vous êtes connecté en mode wifi, veuillez brancher votre ordinateur au modem avec un câble Ethernet puis testez de nouveau la connexion sur plusieurs sites.
   utter_lenteur_non_regle:
   - text: "Fermez toutes les applications en cours d'exécution dans votre ordinateur et testez votre connexion pendant des différents moments de la journée sur , <a target='_blank' href='http://topnetunis.speedtest.net'>http://topnetunis.speedtest.net</a>"
-  utter_ask_type_equipement:
+  utter_prb_appareil:
+  - text: "Donc le dysfonctionnement vient de l'appareil en question."
+  utter_ask_equipement:
   - buttons:
-    - payload: '/equipement{{"equipement": "modem"}}'
+    - payload: '/Typeequipement{{"equipement": "modem"}}'
       title: modem
-    - payload: '/equipement{{"equipement": "répéteur wifi"}}'
+    - payload: '/Typeequipement{{"equipement": "répéteur wifi"}}'
       title: wifi
-    - payload: '/equipement{{"equipement": "point daccès"}}'
+    - payload: '/Typeequipement{{"equipement": "point daccès"}}'
       title: point d'accès
     text: Qu’elle est le type de votre équipement ? (Modem, répéteur, point d’accès)
   utter_ask_marque_modem:
@@ -161,16 +190,16 @@ responses:
    <a target='_blank' href='https://www.topnet.tn/telechargement/?dir=R%C3%A9peteurs%20et%20Point%20d%27acc%C3%A8s'>https://www.topnet.tn/telechargement/?dir=R%C3%A9peteurs%20et%20Point%20d%27acc%C3%A8s</a>"
   utter_ask_type_coupure:
   - buttons:
-    - payload: '/coupure{{"type_coupure": "pas de connexion"}}'
+    - payload: '/pas_de_connexion{{"type_coupure": "pas de connexion"}}'
       title: pas de connexion
-    - payload: '/coupure{{"type_coupure": "mini_coupure"}}'
+    - payload: '/micro_coupure{{"type_coupure": "mini_coupure"}}'
       title: mini_coupure
     text: Est ce que vous avez des coupures fréquentes(déconnexion ou mini coupures) ou vous n'avez plus de connexion ?
-  utter_ask_tonalite: 
+  utter_ask_etat_tonalite: 
   - buttons: 
-    - payload: /deny
+    - payload: '/deny_tonalite{{"etat_tonalite": "no_tonalite"}}'
       title: non
-    - payload: /affirm
+    - payload: '/affirm_tonalite{{"etat_tonalite": "yes_tonalite"}}'
       title: oui
     text: Avez-vous de la tonalité sur votre appareil téléphonique?
   utter_test_tonalite:
@@ -189,22 +218,22 @@ responses:
   *Enlevez le filtre, branchez le modem directement sur la prise téléphonique et testez votre connexion."
   utter_affirm_parasite:
   - text: Les fils peuvent être humides,usés ou mal branchés. Vérifiez tous les fils téléphoniques ou raccordements.
-  utter_ask_voyant_power:
+  utter_ask_etat_voyant_power:
   - buttons:
-    - payload: '/coupure{{"etat_voyant_power": "rouge"}}'
+    - payload: '/etat_voyant{{"etat_voyant_power": "rouge"}}'
       title: rouge
-    - payload: '/coupure{{"etat_voyant_power": "éteint"}}'
+    - payload: '/etat_voyant{{"etat_voyant_power": "éteint"}}'
       title: éteint
-    - payload: '/coupure{{"etat_voyant_power": "vert"}}'
+    - payload: '/etat_voyant{{"etat_voyant_power": "vert"}}'
       title: vert
     text: Quel est l'état du voyant Power(éteint, rouge, ou vert) ?
-  utter_ask_voyant_adsl:
+  utter_ask_etat_voyant_adsl:
   - buttons:
-    - payload: '/coupure{{"etat_voyant_adsl": "rouge"}}'
+    - payload: '/etat_voyant{{"etat_voyant_adsl": "rouge"}}'
       title: rouge
-    - payload: '/coupure{{"etat_voyant_adsl": "clignote en vert"}}'
+    - payload: '/etat_voyantcoupure{{"etat_voyant_adsl": "clignote en vert"}}'
       title: éteint
-    - payload: '/coupure{{"etat_voyant_adsl": "vert"}}'
+    - payload: '/etat_voyant{{"etat_voyant_adsl": "vert"}}'
       title: vert
     text: Est-ce que le deuxième voyant après Power est éteint allumé en vert ou clignote en vert ?
   utter_ask_prb_regle:
@@ -228,9 +257,10 @@ responses:
   - text: aurevoir ! n'hésitez à me contacter au cas de probléme
   utter_welcom:
   - text: je suis ravis d'avoir pu vous aider. merci pour votre confiance 
+
 actions: 
 - action_check_phone
 - action_check_lenteur
 - action_prb_wifi
 - action_config_modem
-- action_ask_voyant_power
+- action_check_voyant_power
