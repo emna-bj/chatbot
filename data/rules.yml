@@ -48,3 +48,15 @@ rules:
   - intent: nlu_fallback
   - action: action_two_stage_fallback
   - active_loop: action_two_stage_fallback
+  
+- rule : minicoupute deny
+  steps:
+  - action: utter_ask_prb_regle
+  - intent: deny
+  - action: action_reclamation_enregistre
+
+- rule : minicoupute affirm
+  steps:
+  - action: utter_ask_prb_regle
+  - intent: affirm
+  - action: utter_welcom

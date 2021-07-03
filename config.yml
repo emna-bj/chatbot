@@ -3,7 +3,11 @@ language: "fr"
 
 pipeline:
   - name: WhitespaceTokenizer
+  - name: printer.Printer 
+    alias: after tokenizer
   - name: RegexFeaturizer
+  - name: printer.Printer 
+    alias: after RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
   - name: CountVectorsFeaturizer

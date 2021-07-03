@@ -38,18 +38,9 @@ stories:
   - action: utter_ask_check_lenteur
   - action: utter_ask_prb_regle
   - intent: deny
-  - action: 
+  - action: action_reclamation_enregistre
   
-- story: probléme lenteur + plusieurs sites + un seul appareil
-  steps:
-  - action: utter_ask_test_appareil
-  - intent: inform
-    entities: 
-    - number_appareil:
-  - slot_was_set:
-    - number_appareil: un seul appareil
-  - action: utter_prb_appareil
-  - action: utter_lenteur_non_regle
+
 
 - story: probléme technique wifi + ask equipement
   steps:
@@ -58,13 +49,13 @@ stories:
   - intent: Typeequipement
   - action: action_prb_wifi
   - intent: deny
-  - action: utter_reclamation_enregistre
+  - action: action_reclamation_enregistre
 
 - story: wifi+ equipement modem + ask marque + ask prb regle =non
   steps:
+  - action: utter_ask_marque_modem
   - intent: marqueModem
   - action: utter_ask_check_modem
-  - action: utter_ask_prb_regle
   - intent: deny
   - action: action_config_modem
   - intent: deny
@@ -77,6 +68,7 @@ stories:
   - action: utter_ask_prb_regle
   - intent: affirm
   - action: utter_welcom
+  
 
 - story: probléme technique coupure + ask type coupure 
   steps:
@@ -100,7 +92,7 @@ stories:
   - action: utter_test_tonalite
   - action: utter_ask_prb_regle
   - intent: deny
-  - action: utter_reclamation_enregistre
+  - action: action_reclamation_enregistre
 
 - story: mini_coupure + ask tonalité + affirm_tonalite 
   steps:
@@ -118,9 +110,9 @@ stories:
   - action: utter_deny_parasite
   - action: utter_ask_prb_regle
   - intent: deny
-  - action: utter_reclamation_enregistre
+  - action: action_reclamation_enregistre
 
-- story: mini-coupure + affirmm_tonalite + affrim_parasite
+- story: mini-coupure + affirmm_tonalite + affirm_parasite
   steps:
   - checkpoint: ask_parasite
   - or:
@@ -129,7 +121,7 @@ stories:
   - action: utter_affirm_parasite
   - action: utter_ask_prb_regle
   - intent: deny
-  - action: utter_reclamation_enregistre
+  - action: action_reclamation_enregistre
 
 - story: probléme technique coupure + ask type coupure + pas de connxion
   steps:

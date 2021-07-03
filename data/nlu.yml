@@ -220,13 +220,14 @@ nlu:
 - intent: deny_tonalite
   examples: |
     - je n'ai pas de tonalité
+    - la tonalité ne fonctionne plus
     - aucune tonalité 
     - je n'est pas de tonalité sur mon fixe
     - plus de tonalité sur ma ligne téléphonique
     - pas de tonalité téléphone fixe
     - téléphone sans tonalité
     - téléphone ne fonctionne pas
-- intent: affrim_parasite
+- intent: affirm_parasite
   examples: |
     - j'ai des parasites au niveau de ma ligne téléphonique 
     - Bruits sur la ligne 
@@ -291,12 +292,10 @@ nlu:
 - regex: phone_number
   examples: |
     - ^[7]\d{7}
-- synonym: 'un seul site'
+- synonym: 'un seul'
   examples: |
-    - un seul
     - uniquement 1
     - 1
-    - un seule site
 - synonym: 'plusieurs sites'
   examples: |
     - plusieurs
