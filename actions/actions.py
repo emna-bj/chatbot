@@ -120,10 +120,9 @@ class CoupureAction(Action):
                # return []
         elif (etat_voyant_power=="éteint" or etat_voyant_power=="rouge"):
             dispatcher.utter_message(text="Débranchez le modem de la prise électrique puis tester le sur une autre prise sans bloc multiprises ou rallonge.")
-            dispatcher.utter_message(template="utter_ask_prb_regle")
             return []
 
-class CoupuredAction(Action):
+class ReclamationAction(Action):
     def name(self) -> Text:
         return "action_reclamation_enregistre"
 

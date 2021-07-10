@@ -44,6 +44,7 @@ entities:
 - etat_voyant_power
 - etat_voyant_adsl
 - type_coupure
+- etat_tonalite
 slots: 
   phone_number:
     type: text
@@ -231,8 +232,8 @@ responses:
   - buttons:
     - payload: '/etat_voyant{{"etat_voyant_adsl": "rouge"}}'
       title: rouge
-    - payload: '/etat_voyantcoupure{{"etat_voyant_adsl": "clignote en vert"}}'
-      title: éteint
+    - payload: '/etat_voyant{{"etat_voyant_adsl": "clignote en vert"}}'
+      title: clignote en vert
     - payload: '/etat_voyant{{"etat_voyant_adsl": "vert"}}'
       title: vert
     text: Est-ce que le deuxième voyant après Power est éteint allumé en vert ou clignote en vert ?

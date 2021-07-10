@@ -60,3 +60,11 @@ rules:
   - action: utter_ask_prb_regle
   - intent: affirm
   - action: utter_welcom
+  
+- rule : minicoupute affirm
+  steps:
+  - action: utter_ask_etat_voyant_adsl
+  - intent: etat_voyant_adsl
+  - slot_was_set:
+    - etat_voyant_adsl: clignote en vert
+  - action: utter_ask_etat_tonalite

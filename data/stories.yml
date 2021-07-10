@@ -20,7 +20,7 @@ stories:
   - intent: problemeTechnique
   - action: utter_ask_phone 
 
-- story: probléme lenteur + plusieurs sites / un seul site
+- story: probléme lenteur 
   steps:
   - intent: lenteur
   - action: utter_ask_test_site
@@ -32,7 +32,7 @@ stories:
   - action: utter_ask_test_appareil
   - intent: inform
     entities: 
-    - number_appareil:
+    - number_appareil: plusieurs appareils
   - slot_was_set:
     - number_appareil: plusieurs appareils
   - action: utter_ask_check_lenteur
@@ -40,8 +40,6 @@ stories:
   - intent: deny
   - action: action_reclamation_enregistre
   
-
-
 - story: probléme technique wifi + ask equipement
   steps:
   - intent: wifi
@@ -59,10 +57,11 @@ stories:
   - intent: deny
   - action: action_config_modem
   - intent: deny
-  - action: utter_out_prb 
+  - action: action_reclamation_enregistre
 
 - story: equipement modem + ask marque + ask prb regle =oui
   steps:
+  - action: utter_ask_marque_modem
   - intent: marqueModem
   - action: utter_ask_check_modem
   - action: utter_ask_prb_regle
@@ -85,7 +84,7 @@ stories:
   - action: utter_ask_etat_tonalite
   - checkpoint: ask_tonalite
 
-- story: mini_coupure + ask tonalité + deny_tonalite
+- story: ask tonalité + deny_tonalite
   steps:
   - checkpoint: ask_tonalite
   - intent: deny
@@ -94,7 +93,7 @@ stories:
   - intent: deny
   - action: action_reclamation_enregistre
 
-- story: mini_coupure + ask tonalité + affirm_tonalite 
+- story: ask tonalité + affirm_tonalite 
   steps:
   - checkpoint: ask_tonalite
   - or:
@@ -103,7 +102,7 @@ stories:
   - action: utter_ask_parasite
   - checkpoint: ask_parasite
 
-- story:  mini-coupure + affirmm_tonalite + deny_parasite
+- story:  ask_parasite + deny_parasite
   steps:
   - checkpoint: ask_parasite
   - intent: deny
@@ -112,7 +111,7 @@ stories:
   - intent: deny
   - action: action_reclamation_enregistre
 
-- story: mini-coupure + affirmm_tonalite + affirm_parasite
+- story: ask_parasite + affirm_parasite
   steps:
   - checkpoint: ask_parasite
   - or:
@@ -123,17 +122,20 @@ stories:
   - intent: deny
   - action: action_reclamation_enregistre
 
-- story: probléme technique coupure + ask type coupure + pas de connxion
+- story: coupure + ask type coupure + pas de connxion + deny
   steps:
   - checkpoint: ask_type_coupure
   - intent: pas_de_connexion
   - action: utter_ask_etat_voyant_power
   - intent: etat_voyant
   - action: action_check_voyant_power
+
+- story: probléme technique coupure + ask type coupure + pas de connxion + affrim
+  steps: 
+  - action: action_check_voyant_power
   - intent: etat_voyant
-    entities: 
-    - etat_voyant_adsl:
   - slot_was_set:
-    - etat_voyant_adsl: vert
-  - checkpoint: ask_tonalite
+    - etat_voyant_adsl: clignote en vert
+  - action: utter_ask_etat_tonalite
+
 
