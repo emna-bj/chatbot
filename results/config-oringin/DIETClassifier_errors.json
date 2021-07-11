@@ -1,0 +1,313 @@
+[
+  {
+    "text": "71498380",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "71498380",
+        "entity": "phone_number"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "71984874",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "71984874",
+        "entity": "phone_number"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "un seul",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "un seul appareil",
+        "entity": "number_appareil"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "number_appareil",
+        "start": 3,
+        "end": 7,
+        "confidence_entity": 0.9388824105262756,
+        "value": "seul",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "1 appareil",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "un seul appareil",
+        "entity": "number_appareil"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "number_appareil",
+        "start": 2,
+        "end": 10,
+        "confidence_entity": 0.9939935803413391,
+        "value": "appareil",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "plusieur appareil",
+    "entities": [
+      {
+        "start": 0,
+        "end": 17,
+        "value": "plusieurs appareils",
+        "entity": "number_appareil"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "number_appareil",
+        "start": 9,
+        "end": 17,
+        "confidence_entity": 0.9927765130996704,
+        "value": "appareil",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "tous les appareils",
+    "entities": [
+      {
+        "start": 0,
+        "end": 18,
+        "value": "plusieurs appareils",
+        "entity": "number_appareil"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "number_site",
+        "start": 0,
+        "end": 18,
+        "confidence_entity": 0.79,
+        "value": "plusieurs appareils",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "c'est un modem tp link",
+    "entities": [
+      {
+        "start": 15,
+        "end": 22,
+        "value": "tp-link",
+        "entity": "marque"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "marque",
+        "start": 18,
+        "end": 22,
+        "confidence_entity": 0.9832614064216614,
+        "value": "link",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "un modem d link",
+    "entities": [
+      {
+        "start": 9,
+        "end": 15,
+        "value": "dlink",
+        "entity": "marque"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "marque",
+        "start": 11,
+        "end": 15,
+        "confidence_entity": 0.9908113479614258,
+        "value": "link",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "j'utilise un repeteur wifi",
+    "entities": [
+      {
+        "start": 13,
+        "end": 26,
+        "value": "épéteur wifi",
+        "entity": "equipement"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "j'utilise un répéteur wifi",
+    "entities": [
+      {
+        "start": 13,
+        "end": 26,
+        "value": "épéteur wifi",
+        "entity": "equipement"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "equipement",
+        "start": 13,
+        "end": 21,
+        "confidence_entity": 0.9369514584541321,
+        "value": "répéteur",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "c'est un épéteur wifi",
+    "entities": [
+      {
+        "start": 9,
+        "end": 21,
+        "value": "épéteur wifi",
+        "entity": "equipement"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "equipement",
+        "start": 9,
+        "end": 16,
+        "confidence_entity": 0.9938541650772095,
+        "value": "épéteur",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "plusieurs sites",
+    "entities": [
+      {
+        "start": 0,
+        "end": 15,
+        "value": "plusieurs sites",
+        "entity": "number_site"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "[plusieur site] {\"entity\": \"number_site\", \"value\": \"plusieurs sites\"}",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "number_appareil",
+        "start": 1,
+        "end": 9,
+        "confidence_entity": 0.9341269731521606,
+        "value": "plusieur",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "tous les sites",
+    "entities": [
+      {
+        "start": 0,
+        "end": 14,
+        "value": "plusieurs sites",
+        "entity": "number_site"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "number_appareil",
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.992452085018158,
+        "value": "tous",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "plusieurs appareils",
+    "entities": [
+      {
+        "start": 0,
+        "end": 19,
+        "value": "plusieurs appareils",
+        "entity": "number_appareil"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "number_appareil",
+        "start": 10,
+        "end": 19,
+        "confidence_entity": 0.9962109327316284,
+        "value": "appareils",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "modem thomson",
+    "entities": [
+      {
+        "start": 6,
+        "end": 13,
+        "value": "thomson",
+        "entity": "marque"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "je suis connécté avec un point d'accès",
+    "entities": [
+      {
+        "start": 25,
+        "end": 38,
+        "value": "point d'accès",
+        "entity": "equipement"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "l'équipement que j'utilise est un modem",
+    "entities": [
+      {
+        "start": 34,
+        "end": 39,
+        "value": "modem",
+        "entity": "equipement"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

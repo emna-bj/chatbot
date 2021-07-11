@@ -1,10 +1,18 @@
 [
   {
-    "text": "j'ai la tonalité sur mon téléphone fixe",
-    "intent": "affirm_tonalite",
+    "text": "pas du tout",
+    "intent": "deny",
     "intent_prediction": {
-      "name": "deny_tonalite",
-      "confidence": 0.8723510503768921
+      "name": "greet",
+      "confidence": 0.2480545938014984
+    }
+  },
+  {
+    "text": "jamais",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.4938240051269531
     }
   }
 ]

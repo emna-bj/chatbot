@@ -1,0 +1,538 @@
+[
+  {
+    "text": "cc",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "thank",
+      "confidence": 0.3212215304374695
+    }
+  },
+  {
+    "text": "bjr",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.39792048931121826
+    }
+  },
+  {
+    "text": "bonsoir",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.32558804750442505
+    }
+  },
+  {
+    "text": "à plus tard",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "pas_de_connexion",
+      "confidence": 0.8940881490707397
+    }
+  },
+  {
+    "text": "à plus",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "pas_de_connexion",
+      "confidence": 0.9110518097877502
+    }
+  },
+  {
+    "text": "yep",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "thank",
+      "confidence": 0.23674120008945465
+    }
+  },
+  {
+    "text": "k",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "thank",
+      "confidence": 0.2442164123058319
+    }
+  },
+  {
+    "text": "wi",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "wifi",
+      "confidence": 0.5818228721618652
+    }
+  },
+  {
+    "text": "si",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.3112935423851013
+    }
+  },
+  {
+    "text": "oui",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.2149290144443512
+    }
+  },
+  {
+    "text": "c'est ça",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "thank",
+      "confidence": 0.2837035357952118
+    }
+  },
+  {
+    "text": "parfait",
+    "intent": "thank",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.416591078042984
+    }
+  },
+  {
+    "text": "c bon",
+    "intent": "thank",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.39597219228744507
+    }
+  },
+  {
+    "text": "ça marche",
+    "intent": "thank",
+    "intent_prediction": {
+      "name": "wifi",
+      "confidence": 0.42913830280303955
+    }
+  },
+  {
+    "text": "fonctionne",
+    "intent": "thank",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.5309571027755737
+    }
+  },
+  {
+    "text": "ca fonctionne",
+    "intent": "thank",
+    "intent_prediction": {
+      "name": "deny_tonalite",
+      "confidence": 0.5412933230400085
+    }
+  },
+  {
+    "text": "j'ai un autre probléme",
+    "intent": "problemeAutres",
+    "intent_prediction": {
+      "name": "wifi",
+      "confidence": 0.2000269591808319
+    }
+  },
+  {
+    "text": "un probléme de coupure de connexion",
+    "intent": "coupure",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.2723241448402405
+    }
+  },
+  {
+    "text": "probléme de coupure de connexion",
+    "intent": "coupure",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.276496022939682
+    }
+  },
+  {
+    "text": "comment rétablir ma connexion?",
+    "intent": "coupure",
+    "intent_prediction": {
+      "name": "micro_coupure",
+      "confidence": 0.3887942433357239
+    }
+  },
+  {
+    "text": "la connexion est coupée",
+    "intent": "pas_de_connexion",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.2959097921848297
+    }
+  },
+  {
+    "text": "connexion coupé",
+    "intent": "pas_de_connexion",
+    "intent_prediction": {
+      "name": "micro_coupure",
+      "confidence": 0.4315251111984253
+    }
+  },
+  {
+    "text": "pas de connexion",
+    "intent": "pas_de_connexion",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.3965577781200409
+    }
+  },
+  {
+    "text": "no connexion",
+    "intent": "pas_de_connexion",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.6843337416648865
+    }
+  },
+  {
+    "text": "no internet",
+    "intent": "pas_de_connexion",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.6460525393486023
+    }
+  },
+  {
+    "text": "connexion inexistante",
+    "intent": "pas_de_connexion",
+    "intent_prediction": {
+      "name": "micro_coupure",
+      "confidence": 0.49328121542930603
+    }
+  },
+  {
+    "text": "Une connexion qui défaille en permanence",
+    "intent": "micro_coupure",
+    "intent_prediction": {
+      "name": "lenteur",
+      "confidence": 0.22672103345394135
+    }
+  },
+  {
+    "text": "connexion Wi-Fi qui disparaît complètement",
+    "intent": "wifi",
+    "intent_prediction": {
+      "name": "micro_coupure",
+      "confidence": 0.39020803570747375
+    }
+  },
+  {
+    "text": "ma ligne telephonique fixe marche",
+    "intent": "affirm_tonalite",
+    "intent_prediction": {
+      "name": "wifi",
+      "confidence": 0.2286062240600586
+    }
+  },
+  {
+    "text": "ma ligne telephonique est bonne",
+    "intent": "affirm_tonalite",
+    "intent_prediction": {
+      "name": "problemeTechnique",
+      "confidence": 0.23517686128616333
+    }
+  },
+  {
+    "text": "il ya la tonalité",
+    "intent": "affirm_tonalite",
+    "intent_prediction": {
+      "name": "deny_tonalite",
+      "confidence": 0.5556942224502563
+    }
+  },
+  {
+    "text": "le téléphone marche bien",
+    "intent": "affirm_tonalite",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.29111263155937195
+    }
+  },
+  {
+    "text": "je n'est pas de tonalité sur mon fixe",
+    "intent": "deny_tonalite",
+    "intent_prediction": {
+      "name": "affirm_tonalite",
+      "confidence": 0.14709234237670898
+    }
+  },
+  {
+    "text": "plus de tonalité sur ma ligne téléphonique",
+    "intent": "deny_tonalite",
+    "intent_prediction": {
+      "name": "affirm_parasite",
+      "confidence": 0.5024667978286743
+    }
+  },
+  {
+    "text": "hey",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.8280013203620911
+    }
+  },
+  {
+    "text": "salut",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.6928442716598511
+    }
+  },
+  {
+    "text": "coucou",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.197260320186615
+    }
+  },
+  {
+    "text": "slt",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.8403542637825012
+    }
+  },
+  {
+    "text": "au revoir",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.5257070064544678
+    }
+  },
+  {
+    "text": "à bientot",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "affirm_tonalite",
+      "confidence": 0.6227735280990601
+    }
+  },
+  {
+    "text": "a+",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.7700530886650085
+    }
+  },
+  {
+    "text": "trés bientot",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "affirm_tonalite",
+      "confidence": 0.5149185061454773
+    }
+  },
+  {
+    "text": "totalement",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "lenteur",
+      "confidence": 0.3453066647052765
+    }
+  },
+  {
+    "text": "nah",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.47058597207069397
+    }
+  },
+  {
+    "text": "je ne crois pas",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "deny_tonalite",
+      "confidence": 0.3706141412258148
+    }
+  },
+  {
+    "text": "pas du tout",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 0.4603438675403595
+    }
+  },
+  {
+    "text": "merci",
+    "intent": "thank",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.5764649510383606
+    }
+  },
+  {
+    "text": "c'est réglé",
+    "intent": "thank",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.48074203729629517
+    }
+  },
+  {
+    "text": "good",
+    "intent": "thank",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.522585928440094
+    }
+  },
+  {
+    "text": "autres",
+    "intent": "problemeAutres",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.3818197548389435
+    }
+  },
+  {
+    "text": "panne réseau",
+    "intent": "problemeTechnique",
+    "intent_prediction": {
+      "name": "micro_coupure",
+      "confidence": 0.5556982159614563
+    }
+  },
+  {
+    "text": "j'ai un problem de connexion internet",
+    "intent": "coupure",
+    "intent_prediction": {
+      "name": "pas_de_connexion",
+      "confidence": 0.3424426317214966
+    }
+  },
+  {
+    "text": "pourquoi la connexion est coupée?",
+    "intent": "coupure",
+    "intent_prediction": {
+      "name": "pas_de_connexion",
+      "confidence": 0.8760899305343628
+    }
+  },
+  {
+    "text": "pas de réseau Internet",
+    "intent": "pas_de_connexion",
+    "intent_prediction": {
+      "name": "micro_coupure",
+      "confidence": 0.5669174194335938
+    }
+  },
+  {
+    "text": "connexion instable",
+    "intent": "micro_coupure",
+    "intent_prediction": {
+      "name": "lenteur",
+      "confidence": 0.7136417627334595
+    }
+  },
+  {
+    "text": "internet instable",
+    "intent": "micro_coupure",
+    "intent_prediction": {
+      "name": "lenteur",
+      "confidence": 0.7522559762001038
+    }
+  },
+  {
+    "text": "la connexion buge",
+    "intent": "lenteur",
+    "intent_prediction": {
+      "name": "pas_de_connexion",
+      "confidence": 0.5943815112113953
+    }
+  },
+  {
+    "text": "les sites sont lents",
+    "intent": "lenteur",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 0.5126878619194031
+    }
+  },
+  {
+    "text": "wifi ne fonction plus",
+    "intent": "wifi",
+    "intent_prediction": {
+      "name": "deny_tonalite",
+      "confidence": 0.405357301235199
+    }
+  },
+  {
+    "text": "comment récupérer le wifi?",
+    "intent": "wifi",
+    "intent_prediction": {
+      "name": "coupure",
+      "confidence": 0.243245929479599
+    }
+  },
+  {
+    "text": "la ligne est bonne",
+    "intent": "affirm_tonalite",
+    "intent_prediction": {
+      "name": "affirm_parasite",
+      "confidence": 0.4848351776599884
+    }
+  },
+  {
+    "text": "la tonalite est bonne",
+    "intent": "affirm_tonalite",
+    "intent_prediction": {
+      "name": "deny_tonalite",
+      "confidence": 0.3597424328327179
+    }
+  },
+  {
+    "text": "j'ai la tonalité sur mon téléphone fixe",
+    "intent": "affirm_tonalite",
+    "intent_prediction": {
+      "name": "deny_tonalite",
+      "confidence": 0.9509865641593933
+    }
+  },
+  {
+    "text": "j'ai des parasites au niveau de ma ligne téléphonique",
+    "intent": "affirm_parasite",
+    "intent_prediction": {
+      "name": "deny_tonalite",
+      "confidence": 0.36529114842414856
+    }
+  },
+  {
+    "text": "je connecte avec un modem",
+    "intent": "Typeequipement",
+    "intent_prediction": {
+      "name": "micro_coupure",
+      "confidence": 0.4333537220954895
+    }
+  },
+  {
+    "text": "avec modem",
+    "intent": "Typeequipement",
+    "intent_prediction": {
+      "name": "marqueModem",
+      "confidence": 0.8482289910316467
+    }
+  },
+  {
+    "text": "l'équipement que j'utilise est un modem",
+    "intent": "Typeequipement",
+    "intent_prediction": {
+      "name": "micro_coupure",
+      "confidence": 0.4881037473678589
+    }
+  }
+]

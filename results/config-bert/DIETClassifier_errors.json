@@ -1,0 +1,281 @@
+[
+  {
+    "text": "71498380",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "71498380",
+        "entity": "phone_number"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "71984874",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "71984874",
+        "entity": "phone_number"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "plusieurs sites",
+    "entities": [
+      {
+        "start": 0,
+        "end": 15,
+        "value": "plusieurs sites",
+        "entity": "number_site"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "1 appareil",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "un seul appareil",
+        "entity": "number_appareil"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "number_appareil",
+        "start": 2,
+        "end": 10,
+        "confidence_entity": 0.987105131149292,
+        "value": "appareil",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "c'est un modem tp link",
+    "entities": [
+      {
+        "start": 15,
+        "end": 22,
+        "value": "tp-link",
+        "entity": "marque"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "marque",
+        "start": 18,
+        "end": 22,
+        "confidence_entity": 0.722409188747406,
+        "value": "link",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "sagem",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "sagem",
+        "entity": "marque"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "dlink",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "dlink",
+        "entity": "marque"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "un modem d link",
+    "entities": [
+      {
+        "start": 9,
+        "end": 15,
+        "value": "dlink",
+        "entity": "marque"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "marque",
+        "start": 11,
+        "end": 15,
+        "confidence_entity": 0.7074483633041382,
+        "value": "link",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "je suis connécté avec un point d'accès",
+    "entities": [
+      {
+        "start": 25,
+        "end": 38,
+        "value": "point d'accès",
+        "entity": "equipement"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "tous les sites",
+    "entities": [
+      {
+        "start": 0,
+        "end": 14,
+        "value": "plusieurs sites",
+        "entity": "number_site"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "un seul appareil",
+    "entities": [
+      {
+        "start": 0,
+        "end": 16,
+        "value": "un seul appareil",
+        "entity": "number_appareil"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "un seul",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "un seul appareil",
+        "entity": "number_appareil"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "plusieurs appareils",
+    "entities": [
+      {
+        "start": 0,
+        "end": 19,
+        "value": "plusieurs appareils",
+        "entity": "number_appareil"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "plusieur appareil",
+    "entities": [
+      {
+        "start": 0,
+        "end": 17,
+        "value": "plusieurs appareils",
+        "entity": "number_appareil"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "tous les appareils",
+    "entities": [
+      {
+        "start": 0,
+        "end": 18,
+        "value": "plusieurs appareils",
+        "entity": "number_appareil"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "mon modéme est tp-link",
+    "entities": [
+      {
+        "start": 15,
+        "end": 22,
+        "value": "tp-link",
+        "entity": "marque"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "la marque de mon modéme sagem",
+    "entities": [
+      {
+        "start": 24,
+        "end": 29,
+        "value": "sagem",
+        "entity": "marque"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "modem thomson",
+    "entities": [
+      {
+        "start": 6,
+        "end": 13,
+        "value": "thomson",
+        "entity": "marque"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "c'est un épéteur wifi",
+    "entities": [
+      {
+        "start": 9,
+        "end": 21,
+        "value": "épéteur wifi",
+        "entity": "equipement"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "avec modem",
+    "entities": [
+      {
+        "start": 5,
+        "end": 10,
+        "value": "modem",
+        "entity": "equipement"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "avec épéteur wifi",
+    "entities": [
+      {
+        "start": 5,
+        "end": 17,
+        "value": "épéteur wifi",
+        "entity": "equipement"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

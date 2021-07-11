@@ -1,0 +1,202 @@
+{
+  "goodbye": {
+    "precision": 0.5,
+    "recall": 0.4,
+    "f1-score": 0.4444444444444445,
+    "support": 10,
+    "confused_with": {
+      "affirm": 2,
+      "affirm_tonalite": 2
+    }
+  },
+  "greet": {
+    "precision": 0.8,
+    "recall": 0.36363636363636365,
+    "f1-score": 0.5000000000000001,
+    "support": 11,
+    "confused_with": {
+      "affirm": 4,
+      "goodbye": 2
+    }
+  },
+  "thank": {
+    "precision": 0.2,
+    "recall": 0.1111111111111111,
+    "f1-score": 0.14285714285714285,
+    "support": 9,
+    "confused_with": {
+      "affirm": 4,
+      "wifi": 1
+    }
+  },
+  "affirm_parasite": {
+    "precision": 0.8,
+    "recall": 0.8888888888888888,
+    "f1-score": 0.8421052631578948,
+    "support": 9,
+    "confused_with": {
+      "deny_tonalite": 1
+    }
+  },
+  "micro_coupure": {
+    "precision": 0.68,
+    "recall": 0.85,
+    "f1-score": 0.7555555555555556,
+    "support": 20,
+    "confused_with": {
+      "lenteur": 3
+    }
+  },
+  "deny_tonalite": {
+    "precision": 0.46153846153846156,
+    "recall": 0.75,
+    "f1-score": 0.5714285714285714,
+    "support": 8,
+    "confused_with": {
+      "affirm_parasite": 1,
+      "affirm_tonalite": 1
+    }
+  },
+  "problemeCommercial": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4,
+    "confused_with": {}
+  },
+  "problemeTechnique": {
+    "precision": 0.8888888888888888,
+    "recall": 0.8888888888888888,
+    "f1-score": 0.8888888888888888,
+    "support": 9,
+    "confused_with": {
+      "micro_coupure": 1
+    }
+  },
+  "inform": {
+    "precision": 0.92,
+    "recall": 1.0,
+    "f1-score": 0.9583333333333334,
+    "support": 23,
+    "confused_with": {}
+  },
+  "lenteur": {
+    "precision": 0.8666666666666667,
+    "recall": 0.9285714285714286,
+    "f1-score": 0.896551724137931,
+    "support": 28,
+    "confused_with": {
+      "pas_de_connexion": 1,
+      "inform": 1
+    }
+  },
+  "wifi": {
+    "precision": 0.7142857142857143,
+    "recall": 0.7692307692307693,
+    "f1-score": 0.7407407407407408,
+    "support": 13,
+    "confused_with": {
+      "coupure": 1,
+      "micro_coupure": 1
+    }
+  },
+  "marqueModem": {
+    "precision": 0.9230769230769231,
+    "recall": 1.0,
+    "f1-score": 0.9600000000000001,
+    "support": 12,
+    "confused_with": {}
+  },
+  "pas_de_connexion": {
+    "precision": 0.6428571428571429,
+    "recall": 0.5625,
+    "f1-score": 0.6000000000000001,
+    "support": 16,
+    "confused_with": {
+      "deny": 4,
+      "micro_coupure": 3
+    }
+  },
+  "problemeAutres": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2,
+    "confused_with": {
+      "wifi": 1,
+      "affirm": 1
+    }
+  },
+  "etat_voyant": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 11,
+    "confused_with": {}
+  },
+  "affirm_tonalite": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 7,
+    "confused_with": {
+      "deny_tonalite": 3,
+      "wifi": 1,
+      "goodbye": 1
+    }
+  },
+  "deny": {
+    "precision": 0.6,
+    "recall": 0.8,
+    "f1-score": 0.6857142857142857,
+    "support": 15,
+    "confused_with": {
+      "affirm": 1,
+      "deny_tonalite": 1
+    }
+  },
+  "Typeequipement": {
+    "precision": 1.0,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.8,
+    "support": 9,
+    "confused_with": {
+      "micro_coupure": 2,
+      "marqueModem": 1
+    }
+  },
+  "coupure": {
+    "precision": 0.5,
+    "recall": 0.16666666666666666,
+    "f1-score": 0.25,
+    "support": 6,
+    "confused_with": {
+      "pas_de_connexion": 2,
+      "deny": 2,
+      "micro_coupure": 1
+    }
+  },
+  "affirm": {
+    "precision": 0.5555555555555556,
+    "recall": 0.6818181818181818,
+    "f1-score": 0.6122448979591836,
+    "support": 22,
+    "confused_with": {
+      "thank": 3,
+      "deny": 2
+    }
+  },
+  "accuracy": 0.7254098360655737,
+  "macro avg": {
+    "precision": 0.6526434676434676,
+    "recall": 0.6413989482739482,
+    "f1-score": 0.6324432424108986,
+    "support": 244
+  },
+  "weighted avg": {
+    "precision": 0.706514541924378,
+    "recall": 0.7254098360655737,
+    "f1-score": 0.7042684114512056,
+    "support": 244
+  }
+}
