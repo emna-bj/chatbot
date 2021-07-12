@@ -1,28 +1,22 @@
 on:
   push:
-    branches:
-      - main
-    paths:
-    - 'actions/**'
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
-  build_and_deploy:
-    runs-on: ubuntu-latest
-    name: Build Action Server image and upgrade Rasa X deployment
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+  build:
 
-    - id: action_server
-      name: Build an action server with a custom actions
-      uses: RasaHQ/action-server-gha@master
-      # Full list of parameters: https://github.com/RasaHQ/action-server-gha/tree/master#input-arguments
-      with:
-        docker_image_name: 'emnabj/rasa'
-        docker_registry_login: ${{ secrets.DOCKER_HUB_LOGIN }}
-        docker_registry_password: ${{ secrets.DOCKER_HUB_PASSWORD }}
-        # More details about github context:
-        # https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#github-context
-        #
-        # github.sha - The commit SHA that triggered the workflow run
-        docker_image_tag: ${{ github.sha }}
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    
+    - name: Docker login
+      run:  |
+        docker login -u emnabj -p emna 2020
+    - name: Build and push Docker image
+      run: docker build -t ton_username_dockerhub/nomdelimage:v1 .
+    - name: Docker push
+      run: docker pushton_username_dockerhub/nomdelimage:v1
