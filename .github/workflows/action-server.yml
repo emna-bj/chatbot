@@ -19,4 +19,4 @@ jobs:
     - name: Build and push Docker image
       run: docker build -t emnabj/action-server:v1 .
     - name: Docker push
-      run: docker pushton_username_dockerhub/nomdelimage:v1
+      run: docker push emnabj/action-server:v1 
